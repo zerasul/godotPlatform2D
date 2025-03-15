@@ -1,7 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6hr4tr4kk4c3"]
+[gd_scene load_steps=15 format=3 uid="uid://c6hr4tr4kk4c3"]
 
 [ext_resource type="Texture2D" uid="uid://dx2oshxuwa8rg" path="res://elli.png" id="1_2d0g0"]
 [ext_resource type="Script" uid="uid://b2q1wepsb3pd3" path="res://player.gd" id="1_ceycc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
+atlas = ExtResource("1_2d0g0")
+region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yd7n1"]
 atlas = ExtResource("1_2d0g0")
@@ -41,6 +45,14 @@ region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7iodb"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onrkg")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yd7n1")
@@ -92,7 +104,7 @@ script = ExtResource("1_ceycc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7iodb")
-animation = &"rigth"
+animation = &"fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

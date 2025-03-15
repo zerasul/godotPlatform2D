@@ -3,9 +3,9 @@ extends CharacterBody2D
 const WALK_FORCE = 600
 const WALK_MAX_SPEED = 200
 const STOP_FORCE = 1300
-const JUMP_SPEED = 300
+const JUMP_SPEED = 400
 
-const ANIMATIONS = ["idle","rigth", "left"]
+const ANIMATIONS = ["idle","rigth", "left", "fall"]
 
 @onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -52,6 +52,12 @@ func _process(delta: float) -> void:
 			anim=0
 	if is_on_floor():	
 		$AnimatedSprite2D.play(ANIMATIONS[anim])
+		$AnimatedSprite2D.flip_h=false
 	else:
-		$AnimatedSprite2D.pause()
+		if anim==2:
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
+		
+		$AnimatedSprite2D.play("fall")
 	pass
