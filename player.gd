@@ -7,6 +7,8 @@ const JUMP_SPEED = 400
 
 const ANIMATIONS = ["idle","rigth", "left", "fall"]
 
+@export var initialPos: Vector2
+
 @onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var anim = ANIMATIONS[0]
@@ -61,3 +63,13 @@ func _process(delta: float) -> void:
 		
 		$AnimatedSprite2D.play("fall")
 	pass
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemy"):
+		if !is_on_floor():
+			body.queue_free()
+		else:
+			position= initialPos
+	
+	pass # Replace with function body.

@@ -16,6 +16,7 @@ var direction = LEFT
 func _ready() -> void:
 	$directiontimer.start()
 	$AnimatedSprite2D.play("move")
+	add_to_group("enemy")
 	
 func _physics_process(delta: float) -> void:
 	var walk = WALK_SPEED* direction
