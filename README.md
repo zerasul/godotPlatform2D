@@ -11,3 +11,10 @@ https://godotengine.org/
 Para más información, puedes consultar la documentación del motor:
 
 https://docs.godotengine.org/en/stable/
+
+
+## Recursos para el taller:
+	
+Puedes encontrar los recursos para este taller en el zip adjunto:
+		
+Recursos taller](platform2dresources.zip)
