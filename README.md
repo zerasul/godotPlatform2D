@@ -17,4 +17,4 @@ https://docs.godotengine.org/en/stable/
 	
 Puedes encontrar los recursos para este taller en el zip adjunto:
 		
-Recursos taller](platform2dresources.zip)
+[Recursos taller](platform2dresources.zip)
