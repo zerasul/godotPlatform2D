@@ -18,3 +18,5 @@ https://docs.godotengine.org/en/stable/
 Puedes encontrar los recursos para este taller en el zip adjunto:
 		
 [Recursos taller](platform2dresources.zip)
+
+[Código GDScript Taller (GIST)](https://gist.github.com/zerasul/fd5679278229e230cb1b6e79b1a265bb)
